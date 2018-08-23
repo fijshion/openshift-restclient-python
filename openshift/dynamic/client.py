@@ -220,6 +220,8 @@ class DynamicClient(object):
             query_params.append(('timeoutSeconds', params['timeout_seconds']))
         if params.get('watch'):
             query_params.append(('watch', params['watch']))
+        query_params.append('exact', 'false')
+        query_params.append('export', 'true')
 
         header_params = params.get('header_params', {})
         form_params = []
